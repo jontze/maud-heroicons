@@ -9,5 +9,9 @@ edition = "2024"
 maud = "0.27.0"
 
 [build-dependencies]
-git2 = "0.20.1"
+gix = { version = "0.73.0", default-features = false, features = [
+    "worktree-mutation",
+    "blocking-network-client",
+    "blocking-http-transport-reqwest-rust-tls",
+] }
 html2maud = "0.1.11"
